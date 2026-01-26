@@ -54,7 +54,7 @@ export default function ProyectoEducativo() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 leading-relaxed">
-                    La Escuela Particular Nº 371 "Rapa Nui" tiene como misión proporcionar una educación integral de calidad, 
+                    La Escuela Particular Nº 371 &quot;Rapa Nui&quot; tiene como misión proporcionar una educación integral de calidad, 
                     que promueva el desarrollo académico, social y emocional de nuestros estudiantes. Nos comprometemos a 
                     crear un ambiente inclusivo y acogedor donde cada niño y niña pueda desarrollar su potencial, respetando 
                     su individualidad y fomentando valores como el respeto, la responsabilidad y la solidaridad.

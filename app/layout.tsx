@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ 
   subsets: ["latin"],
   display: 'swap',
-  fallback: ['system-ui', 'arial'],
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
 });
 
 export const metadata: Metadata = {

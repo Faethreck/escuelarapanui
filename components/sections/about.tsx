@@ -47,7 +47,7 @@ export function About() {
             </div>
             <div>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                La <strong className="text-primary">Escuela Particular Nº 371 "Rapa Nui"</strong> fue fundada en el año 1958 y es un establecimiento educacional que atiende a niños de Nivel Preescolar y Educación Básica en la comuna de Lo Prado.
+                La <strong className="text-primary">Escuela Particular Nº 371 &quot;Rapa Nui&quot;</strong> fue fundada en el año 1958 y es un establecimiento educacional que atiende a niños de Nivel Preescolar y Educación Básica en la comuna de Lo Prado.
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export function About() {
           </p>
           <div className="bg-secondary/10 border-l-4 border-secondary p-6 rounded-r-lg my-8">
             <p className="text-lg italic text-primary font-medium">
-              "Matemáticas y Ciencias, Deporte y Religión nos preparan con esmero, sacrificio y vocación"
+              &quot;Matemáticas y Ciencias, Deporte y Religión nos preparan con esmero, sacrificio y vocación&quot;
             </p>
           </div>
           <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 my-8">
