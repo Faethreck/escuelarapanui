@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Escuela Rapa Nui</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // This handles client-side routing for Next.js on GitHub Pages
+      var pathSegmentsToKeep = 1; // Keep /escuelarapanui
+
+      var l = window.location;
+      var basePath = '/escuelarapanui';
+      
+      // Check if we're already on the base path
+      if (l.pathname.startsWith(basePath)) {
+        var pathAfterBase = l.pathname.slice(basePath.length);
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          basePath + '/?/' +
+          pathAfterBase.replace(/^\//, '').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      } else {
+        // Redirect to base path
+        l.replace(basePath + '/');
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

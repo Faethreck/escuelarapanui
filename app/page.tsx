@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/sections/hero"
 import { Banner } from "@/components/sections/banner"
@@ -13,7 +14,16 @@ import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 
 export default function Home() {
+  const searchParams = useSearchParams()
+
   useEffect(() => {
+    // Handle GitHub Pages 404 redirect (SPA routing)
+    const path = searchParams.get('/')
+    if (path) {
+      const cleanPath = path.replace(/~and~/g, '&')
+      window.history.replaceState(null, '', cleanPath)
+    }
+
     // Check if we need to scroll to a section after navigation from subpage
     const scrollToHash = sessionStorage.getItem("scrollToHash")
     if (scrollToHash) {
@@ -26,7 +36,7 @@ export default function Home() {
         }
       }, 100)
     }
-  }, [])
+  }, [searchParams])
 
   return (
     <main className="min-h-screen">
