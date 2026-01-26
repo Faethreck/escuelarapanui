@@ -27,6 +27,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# data files (posts will be managed through admin panel)
+/data/posts.json
+
 # vercel
 .vercel
 
