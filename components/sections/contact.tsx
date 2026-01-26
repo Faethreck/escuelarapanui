@@ -30,104 +30,109 @@ export function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Map */}
-          <div className="rounded-xl overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps?q=Av+Las+Torres+935,+Lo+Prado,+Región+Metropolitana,+Chile&output=embed"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Ubicación de la Escuela Rapa Nui"
-              className="w-full"
-            />
+          {/* Left Column: Map and Contact Info */}
+          <div className="space-y-6">
+            {/* Map - More compact */}
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps?q=Av+Las+Torres+935,+Lo+Prado,+Región+Metropolitana,+Chile&output=embed"
+                width="100%"
+                height="320"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación de la Escuela Rapa Nui"
+                className="w-full"
+              />
+            </div>
+
+            {/* Contact Info Cards in Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                      <MapPin className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl">Ubicación</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-2">
+                    Av. Las Torres 935
+                    <br />
+                    Lo Prado, Región Metropolitana
+                  </p>
+                  <a
+                    href="https://maps.google.com/?q=Av+Las+Torres+935+Lo+Prado"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-secondary transition-colors font-medium text-sm"
+                  >
+                    Ver en Google Maps →
+                  </a>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                      <Phone className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl">Contacto</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <p className="text-gray-700">
+                    <strong>Teléfono:</strong>
+                    <br />
+                    <a href="tel:+56227730784" className="text-primary hover:text-secondary transition-colors">
+                      (2) 2730-784
+                    </a>
+                  </p>
+                  <p className="text-gray-700">
+                    <strong>Email:</strong>
+                    <br />
+                    <a
+                      href="mailto:escuelarapanui@gmail.com"
+                      className="text-primary hover:text-secondary transition-colors text-sm break-all"
+                    >
+                      escuelarapanui@gmail.com
+                    </a>
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                      <Clock className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl">Horario de Atención</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">
+                    <strong>Jornada Mañana:</strong>
+                    <br />
+                    08:00 - 13:45 hrs
+                    <br />
+                    <br />
+                    <strong>Jornada Tarde:</strong>
+                    <br />
+                    14:00 - 19:00 hrs
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
-          {/* Contact Info */}
-          <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">Ubicación</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700 mb-2">
-                  Av. Las Torres 935
-                  <br />
-                  Lo Prado, Región Metropolitana
-                </p>
-                <a
-                  href="https://maps.google.com/?q=Av+Las+Torres+935+Lo+Prado"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-secondary transition-colors font-medium"
-                >
-                  Ver en Google Maps →
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">Horario de Atención</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">
-                  <strong>Jornada Mañana:</strong>
-                  <br />
-                  08:00 - 13:45 hrs
-                  <br />
-                  <br />
-                  <strong>Jornada Tarde:</strong>
-                  <br />
-                  14:00 - 19:00 hrs
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">Contacto</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <p className="text-gray-700">
-                  <strong>Teléfono:</strong>
-                  <br />
-                  <a href="tel:+56227730784" className="text-primary hover:text-secondary transition-colors">
-                    (2) 2730-784
-                  </a>
-                </p>
-                <p className="text-gray-700">
-                  <strong>Email:</strong>
-                  <br />
-                  <a
-                    href="mailto:escuelarapanui@gmail.com"
-                    className="text-primary hover:text-secondary transition-colors"
-                  >
-                    escuelarapanui@gmail.com
-                  </a>
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Contact Form */}
-            <Card>
+          {/* Right Column: Contact Form */}
+          <div>
+            <Card className="h-full">
               <CardHeader>
                 <CardTitle className="text-xl">Envíanos un Mensaje</CardTitle>
               </CardHeader>
@@ -165,7 +170,7 @@ export function Contact() {
                   <div>
                     <textarea
                       placeholder="Mensaje"
-                      rows={5}
+                      rows={6}
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
