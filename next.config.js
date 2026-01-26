@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  basePath: '/escuelarapanui',
+  trailingSlash: true,
   images: {
     unoptimized: true, // Required for static export
     remotePatterns: [
@@ -17,9 +19,6 @@ const nextConfig = {
       },
     ],
   },
-  // If deploying to GitHub Pages with a repository name, uncomment and set:
-  // basePath: '/escuelarapanui',
-  // trailingSlash: true,
 }
 
 module.exports = nextConfig
